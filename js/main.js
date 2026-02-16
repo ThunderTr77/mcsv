@@ -8,14 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             preloader.classList.add('preloader-hidden');
             document.body.classList.remove('preloader-active');
-            // Remove from DOM after transition
             preloader.addEventListener('transitionend', () => {
                 preloader.remove();
             }, { once: true });
         }, 1500);
     }
 
-    // ===== NAVBAR SCROLL =====
     const navbar = document.querySelector('.nav-glass');
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 50) {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ===== MOBILE MENU =====
+
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileMenuClose = document.querySelector('.mobile-menu-close');
@@ -55,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== SCROLL PROGRESS BAR + LOGO TRACKER =====
     const scrollProgress = document.querySelector('.scroll-progress');
     if (scrollProgress) {
         gsap.to(scrollProgress, {
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== GLASS CARD TILT =====
+
     document.querySelectorAll('.glass-card').forEach(card => {
         card.addEventListener('mousemove', function (e) {
             const rect = this.getBoundingClientRect();
@@ -99,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== ICON FLOAT =====
+
     const icons = [
         ...document.querySelectorAll('.problem-icon'),
         ...document.querySelectorAll('.service-icon'),
@@ -117,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== STEP NUMBERS =====
+
     document.querySelectorAll('.step-number').forEach((num, index) => {
         ScrollTrigger.create({
             trigger: num,
@@ -132,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== NAV LINK MAGNETIC =====
+
     document.querySelectorAll('.nav-links a').forEach(el => {
         el.addEventListener('mousemove', function (e) {
             const rect = this.getBoundingClientRect();
@@ -155,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== PARALLAX SHAPES =====
+
     gsap.utils.toArray('.shape').forEach((shape, i) => {
         gsap.to(shape, {
             y: () => -80 * (i + 1),
@@ -169,7 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== SCROLL TO TOP =====
+
+
     const scrollTopBtn = document.createElement('button');
     scrollTopBtn.innerHTML = '↑';
     scrollTopBtn.style.cssText = `
@@ -201,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.to(window, { duration: 1.2, scrollTo: { y: 0 }, ease: 'power3.inOut' });
     });
 
-    // ===== GRADIENT MESH PARALLAX =====
+
     const mesh = document.querySelector('.gradient-mesh');
     if (mesh) {
         window.addEventListener('scroll', () => {
@@ -209,7 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== SMOOTH SCROLL =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -224,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== CURSOR GLOW =====
     const cursorGlow = document.createElement('div');
     cursorGlow.style.cssText = `
         position: fixed;
@@ -247,10 +243,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== SCROLL REVEAL =====
+
     const revealElements = document.querySelectorAll('.reveal-element');
     revealElements.forEach((el, index) => {
-        // Find siblings in same parent for stagger
+
         const parent = el.parentElement;
         const siblings = Array.from(parent.querySelectorAll('.reveal-element'));
         const siblingIndex = siblings.indexOf(el);
@@ -272,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== SECTION TITLE PARALLAX =====
     document.querySelectorAll('.section-title').forEach(title => {
         gsap.to(title, {
             y: -20,
@@ -286,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== ICON HOVER INTERACTION =====
+
     document.querySelectorAll('.problem-icon ion-icon, .service-icon ion-icon, .usp-icon ion-icon').forEach(icon => {
         const parent = icon.closest('.glass-card, .glass-card-premium');
         if (parent) {
@@ -309,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ===== STAT COUNTER ANIMATION =====
+
     document.querySelectorAll('.stat-value').forEach(stat => {
         const text = stat.textContent;
         ScrollTrigger.create({
@@ -325,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== STEP CONNECTOR DRAW =====
+
     document.querySelectorAll('.step-connector').forEach(connector => {
         gsap.fromTo(connector,
             { scaleY: 0, transformOrigin: 'top' },
