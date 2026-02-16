@@ -337,5 +337,5 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
-    console.log('✅ GSAP animations + Ionicons loaded!');
+
 });
