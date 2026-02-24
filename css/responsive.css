@@ -103,6 +103,43 @@
         display: flex;
     }
 
+
+    .particle-canvas {
+        display: none;
+    }
+
+    .morphing-blob-container {
+        opacity: 0.5;
+    }
+
+    .morphing-blob-1 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .morphing-blob-2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .morphing-blob-3 {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    .mobile-menu-close {
+        width: 44px;
+        height: 44px;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .mobile-menu-close svg {
+        width: 22px;
+        height: 22px;
+    }
+
     .section {
         padding: 60px 1.25rem;
     }
@@ -217,7 +254,6 @@
         height: 30px;
     }
 
-
     .service-card {
         padding: 1.5rem;
     }
@@ -232,7 +268,6 @@
         font-size: 28px;
     }
 
-
     .usp-card {
         padding: 2rem;
     }
@@ -245,7 +280,6 @@
     .usp-icon {
         font-size: 32px;
     }
-
 
     .comparison-header {
         grid-template-columns: 1fr;
@@ -303,11 +337,9 @@
         opacity: 0.8;
     }
 
-
     .comparison-header {
         display: none;
     }
-
 
     .footer {
         padding: 2.5rem 1.25rem;
@@ -339,7 +371,6 @@
         opacity: 0.2;
     }
 }
-
 
 @media (max-width: 479px) {
 
@@ -428,7 +459,6 @@
         font-size: 15px;
     }
 
-
     .step-item {
         gap: 1rem;
     }
@@ -451,7 +481,6 @@
         font-size: 14px;
     }
 
-
     .service-title {
         font-size: 18px;
     }
@@ -460,7 +489,6 @@
         font-size: 14px;
         padding: 0.35rem 0;
     }
-
 
     .usp-card {
         padding: 1.5rem;
@@ -497,7 +525,6 @@
         padding: 0.5rem 0.75rem;
     }
 
-
     .comparison-col.glass-card {
         padding: 1rem;
     }
@@ -520,7 +547,6 @@
         font-size: 12px;
     }
 
-
     .footer {
         padding: 2rem 1rem;
     }
@@ -537,7 +563,6 @@
     .footer-copyright {
         font-size: 12px;
     }
-
 
     .floating-shapes {
         opacity: 0.15;
@@ -575,6 +600,15 @@
         transform: scale(0.98);
     }
 
+
+    .glass-card::after,
+    .glass-card-premium::after {
+        display: none;
+    }
+
+    .particle-canvas {
+        display: none;
+    }
 
     .nav-links a {
         min-height: 44px;

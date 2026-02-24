@@ -54,6 +54,12 @@
             <img src="assets/images/logo.png" alt="" class="scroll-logo-img">
         </div>
     </div>
+    <canvas id="particle-canvas" class="particle-canvas"></canvas>
+    <div class="morphing-blob-container">
+        <div class="morphing-blob morphing-blob-1"></div>
+        <div class="morphing-blob morphing-blob-2"></div>
+        <div class="morphing-blob morphing-blob-3"></div>
+    </div>
     <div class="gradient-mesh"></div>
     <div class="floating-shapes">
         <div class="shape shape-1"></div>
@@ -63,10 +69,10 @@
 
     <nav class="nav-glass">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="#" class="nav-logo" id="nav-logo-link">
                 <img src="assets/images/logo.png" alt="Viecz" class="nav-logo-img">
                 <span class="nav-logo-text">Viecz</span>
-            </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="#problem">Vấn đề</a></li>
                 <li><a href="#solution">Giải pháp</a></li>
@@ -84,7 +90,13 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu">
-        <div class="mobile-menu-close">×</div>
+        <div class="mobile-menu-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+            </svg>
+        </div>
         <div class="mobile-menu-content">
             <a href="#problem">Vấn đề</a>
             <a href="#solution">Giải pháp</a>
@@ -132,12 +144,16 @@
     </div>
 
     <section id="problem" class="section problem-section">
+        <div class="section-orbs">
+            <div class="glass-orb glass-orb-1"></div>
+            <div class="glass-orb glass-orb-2"></div>
+        </div>
         <div class="section-container">
             <h2 class="section-title liquid-text reveal-element">Bạn đang gặp phải những tình huống này?</h2>
 
             <div class="problem-grid">
-                <div class="problem-card glass-card reveal-element" data-tilt>
-                    <div class="problem-icon"><ion-icon name="alarm-outline"></ion-icon></div>
+                <div class="problem-card glass-card reveal-element">
+                    <div class=" problem-icon"><ion-icon name="alarm-outline"></ion-icon></div>
                     <h3 class="problem-title">Deadline "dí"</h3>
                     <p class="problem-desc">
                         23h đêm cần in bài gấp nhưng tiệm photo đóng cửa.
@@ -145,8 +161,8 @@
                     </p>
                 </div>
 
-                <div class="problem-card glass-card reveal-element" data-tilt>
-                    <div class="problem-icon"><ion-icon name="book-outline"></ion-icon></div>
+                <div class="problem-card glass-card reveal-element">
+                    <div class=" problem-icon"><ion-icon name="book-outline"></ion-icon></div>
                     <h3 class="problem-title">"Đói mà bận"</h3>
                     <p class="problem-desc">
                         Đang ôn thi trong thư viện giờ cao điểm.
@@ -154,8 +170,8 @@
                     </p>
                 </div>
 
-                <div class="problem-card glass-card reveal-element" data-tilt>
-                    <div class="problem-icon"><ion-icon name="wallet-outline"></ion-icon></div>
+                <div class="problem-card glass-card reveal-element">
+                    <div class=" problem-icon"><ion-icon name="wallet-outline"></ion-icon></div>
                     <h3 class="problem-title">Muốn kiếm tiền nhưng kẹt lịch</h3>
                     <p class="problem-desc">
                         Rảnh 30 phút giữa giờ học nhưng không thể làm part-time ca cố định 4 tiếng.
@@ -255,12 +271,16 @@
     </div>
 
     <section id="services" class="section services-section">
+        <div class="section-orbs">
+            <div class="glass-orb glass-orb-2"></div>
+            <div class="glass-orb glass-orb-3"></div>
+        </div>
         <div class="section-container">
             <h2 class="section-title liquid-text reveal-element">Đa dạng dịch vụ cho đời sống sinh viên</h2>
 
             <div class="services-grid">
-                <div class="service-card glass-card reveal-element" data-tilt>
-                    <div class="service-icon-wrapper">
+                <div class="service-card glass-card reveal-element">
+                    <div class=" service-icon-wrapper">
                         <div class="service-icon"><ion-icon name="cube-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Vận chuyển & Mua hộ</h3>
@@ -271,8 +291,8 @@
                     </ul>
                 </div>
 
-                <div class="service-card glass-card reveal-element" data-tilt>
-                    <div class="service-icon-wrapper">
+                <div class="service-card glass-card reveal-element">
+                    <div class=" service-icon-wrapper">
                         <div class="service-icon"><ion-icon name="print-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Hỗ trợ học tập</h3>
@@ -283,8 +303,8 @@
                     </ul>
                 </div>
 
-                <div class="service-card glass-card reveal-element" data-tilt>
-                    <div class="service-icon-wrapper">
+                <div class="service-card glass-card reveal-element">
+                    <div class=" service-icon-wrapper">
                         <div class="service-icon"><ion-icon name="laptop-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Dịch vụ kỹ năng</h3>
@@ -295,8 +315,8 @@
                     </ul>
                 </div>
 
-                <div class="service-card glass-card reveal-element" data-tilt>
-                    <div class="service-icon-wrapper">
+                <div class="service-card glass-card reveal-element">
+                    <div class=" service-icon-wrapper">
                         <div class="service-icon"><ion-icon name="home-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Đời sống</h3>
@@ -318,13 +338,17 @@
     </div>
 
     <section id="why-us" class="section why-section">
+        <div class="section-orbs">
+            <div class="glass-orb glass-orb-1"></div>
+            <div class="glass-orb glass-orb-3"></div>
+        </div>
         <div class="section-container">
             <h2 class="section-title liquid-text reveal-element">Nền tảng tin cậy dành riêng cho cộng đồng sinh viên
             </h2>
 
             <div class="usp-grid">
-                <div class="usp-card glass-card-premium reveal-element" data-tilt>
-                    <div class="usp-icon-wrapper">
+                <div class="usp-card glass-card-premium reveal-element">
+                    <div class=" usp-icon-wrapper">
                         <div class="usp-icon"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
                     </div>
                     <h3 class="usp-title">An toàn tuyệt đối</h3>
@@ -335,8 +359,8 @@
                     <div class="usp-stat-badge">57% sinh viên mong muốn tính năng này</div>
                 </div>
 
-                <div class="usp-card glass-card-premium reveal-element" data-tilt>
-                    <div class="usp-icon-wrapper">
+                <div class="usp-card glass-card-premium reveal-element">
+                    <div class=" usp-icon-wrapper">
                         <div class="usp-icon"><ion-icon name="cash-outline"></ion-icon></div>
                     </div>
                     <h3 class="usp-title">Chi phí siêu rẻ</h3>
@@ -351,8 +375,8 @@
                     </div>
                 </div>
 
-                <div class="usp-card glass-card-premium reveal-element" data-tilt>
-                    <div class="usp-icon-wrapper">
+                <div class="usp-card glass-card-premium reveal-element">
+                    <div class=" usp-icon-wrapper">
                         <div class="usp-icon"><ion-icon name="people-outline"></ion-icon></div>
                     </div>
                     <h3 class="usp-title">Tin cậy & Gần gũi</h3>
@@ -473,7 +497,7 @@
             </div>
 
             <div class="footer-copyright">
-                <p>&copy; 2026 Viecz Team</p>
+                <p>&copy; 2026 </p>
             </div>
         </div>
     </footer>
